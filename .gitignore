@@ -2,3 +2,5 @@
 .vscode/
 token
 test.py
+discordbot.log
+.env
