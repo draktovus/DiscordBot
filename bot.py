@@ -1,7 +1,8 @@
 import os
 import discord
-from discord.ext import commands
 import logging
+from discord.ext import commands
+from dotenv import load_dotenv
 
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
@@ -9,11 +10,12 @@ handler = logging.FileHandler(filename='discordbot.log', encoding='utf-8', mode=
 handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 logger.addHandler(handler)
 
-from dotenv import load_dotenv
+# Load environment vars using a library
 load_dotenv()
 TOKEN = os.environ.get('BOT-TOKEN')
 GUILD = os.environ.get('BOT-GUILD')
 
+# Create the bot client class
 bot = commands.Bot(command_prefix='!', 
         description='My prefix is \'!\'.', 
         owner_id=91253654056624128,
@@ -32,21 +34,6 @@ async def on_ready():
     for guild in bot.guilds:
         if guild.name == GUILD:
             print(f'{guild}')
-
-# @client.event
-# async def on_ready():
-#     print('Logged in as {0.user}'.format(BOT), '\nI am in the following servers:')
-#     for guild in client.guilds:
-#         if guild == GUILD:
-#             print(f'{guild}')
-# @client.event
-# async def on_message(message):
-#     # client.user is the bot itself
-#     if message.author == BOT.user:
-#         return
-
-#     if message.content.startswith('$hello'):
-#         await message.channel.send('Hello!')
 
 # add new commands, can only do it once
 try:
