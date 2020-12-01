@@ -1,5 +1,10 @@
 import discord
 
+# read in token
+token = 'the token'
+with open('token','r') as f:
+    token = f.readline()
+
 client = discord.Client()
 
 @client.event
@@ -15,4 +20,4 @@ async def on_message(message):
     if message.content.startswith('$hello'):
         await message.channel.send('Hello!')
 
-client.run('NDY4OTc3NjE5MTM2ODA2OTEy.W06vcQ.QR_5vMb-NP146j-IMQ2eDMBGYrs')
+client.run(token)

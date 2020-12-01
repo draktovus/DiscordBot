@@ -1,2 +1,4 @@
-.botvenv/
+#.botvenv/
 .vscode/
+token
+test.py
