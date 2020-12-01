@@ -4,6 +4,10 @@ My discord bot.
 
 I am learning how to use github, python, and the discord API in order to make the bot.
 
+## discord.py
+
+[See Documentation](https://discordpy.readthedocs.io/en/latest/index.html#)
+
 ## Pip and Virtual Environments
 
 [Stackoverflow page.](https://stackoverflow.com/questions/6590688/is-it-bad-to-have-my-virtualenv-directory-inside-my-git-repository)
