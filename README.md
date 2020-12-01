@@ -1,2 +1,0 @@
-# DiscordBot
-My Discord bot
